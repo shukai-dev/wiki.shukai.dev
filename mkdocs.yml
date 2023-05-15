@@ -1,3 +1,19 @@
-site_name: Robot Game Wiki
-site_description: Robot Game Wiki 是一个开源的机器人竞赛知识库，提供机器人竞赛的相关知识、技术、经验等内容，帮助广大机器人竞赛爱好者更快更深入地学习机器人竞赛知识。
-site_author: Robot Game Wiki Contributors
+# 项目信息
+site_name: KAI Wiki
+site_description: KAI Wiki 是一个开源的机器人竞赛知识库，提供机器人竞赛的相关知识、技术、经验等内容，帮助广大机器人竞赛爱好者更快更深入地学习机器人竞赛知识。
+site_author: KAI Wiki Contributors
+site_url: https://wiki.shukai.dev
+strict: false
+
+# 版权信息
+copyright: 'Copyright &copy; 2023 KAI Wiki Team'
+
+# 内容配置
+nav: 
+  - 简介: index.md
+  - 学习路线: learning-path.md
+
+# 主题配置
+theme:
+  name: material
+  language: 'zh'
