@@ -6,4 +6,4 @@
 
 为了方便热爱机器人创新的同学们入门，2023 年 5 月，我们启动了这个知识库项目。目前还有大量的内容需要完善，欢迎大家一起来为这个知识库添砖加瓦。
 
-本项目受 [CTF Wiki](https://github.com/ctf-wiki/ctf-wiki/) 与 [OI Wiki](https://github.com/OI-wiki/OI-wiki) 启发，在此表示感谢。但与这两个项目不同的是，机器人与创赛的知识库需要涵盖的内容相当广泛（具体的内容范围可以参考 [学习路线](https://wiki.shukai.dev/learning-path)），因此我们希望能够有更多相关专业的同学参与进来，共同完善这个知识库。
+本项目受 [CTF Wiki](https://github.com/ctf-wiki/ctf-wiki/) 与 [OI Wiki](https://github.com/OI-wiki/OI-wiki) 启发，在此表示感谢。但与这两个项目不同的是，机器人与创赛的知识库需要涵盖的内容相当广泛（具体的内容范围可以参考 [学习路线](./docs/learning-path.md)），因此我们希望能够有更多相关专业的同学参与进来，共同完善这个知识库。
