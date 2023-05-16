@@ -19,6 +19,11 @@ jobs:
         with:
           submodules: true
       
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: pipenv
+      
       - name: Install Python dependencies
         run: |
           curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python3
