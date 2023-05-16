@@ -26,8 +26,8 @@ pipenv run mkdocs build # 构建
 pipenv run mkdocs serve # 本地预览
 ```
 
-### 部署
+### 发布
 
 ```bash
-pipenv run mkdocs gh-deploy # 部署到 GitHub Pages
+pipenv run mkdocs gh-deploy # 发布到 GitHub Pages
 ```

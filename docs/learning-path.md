@@ -30,11 +30,11 @@
 
 可能会涉及到的学习路线：
 
-* [Linux 基础知识](./sbc/linux-basic/beginning.md) 
+* [Linux 基础知识](./sbc/linux-basic/beginning.md)
 * Linux 上的 C/C++ 编程
 * C/C++ 编程（进阶）
 * Python 编程
-* 设备间通信
+* 计算机网络
 
 ## 计算机视觉（CV）
 
