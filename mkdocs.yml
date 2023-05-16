@@ -12,6 +12,12 @@ copyright: 'Copyright &copy; 2023 KAI Wiki Team'
 nav: 
   - 简介: index.md
   - 学习路线: learning-path.md
+  - 基础:
+    - 计算机基础知识:
+      - 简介: basic/cs-basic/beginning.md
+  - SBC:
+    - Linux 基础知识:
+      - 简介: sbc/linux-basic/beginning.md
 
 # 主题配置
 theme:
