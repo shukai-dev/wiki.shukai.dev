@@ -19,11 +19,10 @@ jobs:
         with:
           submodules: true
       
-      - name: Install Dependencies
+      - name: Install Python dependencies
         run: |
-          sudo apt update
-          sudo apt install -y pipenv
-          pipenv install --dev
+          curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python3
+          pipenv install
       
       - name: Build
         run: |
