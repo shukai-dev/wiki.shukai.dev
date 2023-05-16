@@ -5,6 +5,11 @@ site_author: KAI Wiki Contributors
 site_url: https://wiki.shukai.dev
 strict: false
 
+# 仓库信息
+repo_name: shukai-dev/wiki.shukai.dev
+repo_url: https://github.com/shukai-dev/wiki.shukai.dev
+# edit_uri: todo
+
 # 版权信息
 copyright: 'Copyright &copy; 2023 KAI Wiki Team'
 
