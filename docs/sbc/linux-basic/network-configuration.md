@@ -10,6 +10,8 @@
 
 接下来，我们将介绍如何通过网络的方式重新连接到树莓派。
 
+**注意**：如果树莓派并未成功启动，那么本文档中的方法将无法使用，请参考 [如何解决树莓派无法启动的问题](./system-troubleshooting.md#如何解决树莓派无法启动的问题)。
+
 ### 借助路由器
 
 需要的硬件：路由器、网线
@@ -40,7 +42,7 @@
 
 [Termux](https://termux.com/) 是一款 Android 上的终端模拟器，可以在 Android 上运行一部分 Linux 命令。
 
-1. 打开 [Termux 的 Github Release 页面](https://github.com/termux/termux-app/releases)
+1. 打开 [Termux 的 Github Release 页面](https://github.com/termux/termux-app/releases)。如果遇到国内访问不通的情况，可以使用这个 [FastGit 提供的镜像地址](https://hub.fgit.ml/termux/termux-app/releases)。
 2. 对于大部分手机，下载带有 `arm64-v8a` 字样的 APK 文件，例如 `termux-app_v0.118.0+github-debug_arm64-v8a.apk`，然后安装
 3. 打开 Termux，等待 Termux 安装完成
 
@@ -104,3 +106,51 @@ Nmap done: 256 IP addresses (2 hosts up) scanned in 11.79 seconds
 
 *作者注：在高版本 Android 中，由于权限收紧，普通用户已无法使用 `iproute2` 的相关命令（例如 `ip a`），所以此处使用 `ifconfig` 和 `nmap` 命令来代替。*
 
+### 借助电脑
+
+需要的硬件：电脑、网线
+
+优点：操作简单
+
+缺点：需要网线，在某些场景下可能不方便
+
+#### Linux
+
+先将树莓派通过网线连接到电脑，然后在电脑上执行以下命令：
+
+```bash
+❯ ip a
+...
+2: enp8s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq state UP group default qlen 1000
+    link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::xxxx:xxxx:xxxx:xxxx/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+...
+```
+
+可以看到，电脑的有线网卡 `enp8s0` 上出现了一个 `fe80::` 开头的 IPv6 地址，这个地址就是电脑的本地链路 IPv6 地址。
+
+然后执行以下命令，在 `enp8s0` 上发送 IPv6 广播包：
+
+```bash
+❯ ping ff02::1%enp8s0
+PING ff02::1%enp8s0(ff02::1%enp8s0) 56 data bytes
+64 bytes from fe80::xxxx:xxxx:xxxx:xxxx%enp8s0: icmp_seq=1 ttl=64 time=0.074 ms
+64 bytes from fe80::yyyy:yyyy:yyyy:yyyy%enp8s0: icmp_seq=1 ttl=64 time=1.49 ms
+64 bytes from fe80::xxxx:xxxx:xxxx:xxxx%enp8s0: icmp_seq=2 ttl=64 time=0.035 ms
+64 bytes from fe80::yyyy:yyyy:yyyy:yyyy%enp8s0: icmp_seq=2 ttl=64 time=1.40 ms
+^C
+--- ff02::1%enp8s0 ping statistics ---
+2 packets transmitted, 2 received, +2 duplicates, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 0.035/0.747/1.487/0.694 ms
+```
+
+可以看到，电脑上收到了两个回复，其中一个来自电脑自己的 IP 地址，另一个就来自树莓派。
+
+接下来，我们就可以通过 SSH 或者 VNC 连接到树莓派了。
+
+```bash
+❯ ssh pi@fe80::yyyy:yyyy:yyyy:yyyy%enp8s0
+```
+
+**备注**：如果收到的回复超过两个，可能是因为电脑上有多个网卡，可以逐个尝试除了本接口上 `fe80::xxxx:xxxx:xxxx:xxxx/64` 以外的 IPv6 地址。
