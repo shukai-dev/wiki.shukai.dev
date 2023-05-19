@@ -30,3 +30,13 @@
 * [系统更新](./system-update.md)\*
 * [系统故障排除](./system-troubleshooting.md)
 * [软件调试](./software-debugging.md)\*
+
+## 本章节的参考资料
+
+这里列出一些相关的文档站点，供大家参考。
+
+* [ArchWiki 中文](https://wiki.archlinuxcn.org/wiki/%E9%A6%96%E9%A1%B5)（推荐）
+* [Arch Linux Manpages](https://man.archlinux.org/)
+* [Debian Wiki](https://wiki.debian.org/)（推荐）
+* [Debian Reference](https://www.debian.org/doc/manuals/debian-reference/)（推荐）
+* [Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/)
