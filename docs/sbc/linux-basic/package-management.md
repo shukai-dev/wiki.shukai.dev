@@ -16,7 +16,7 @@
 
 ### APT 和 dpkg
 
-APT（Advanced Packaging Tool）是一个软件包管理器，用于管理 Debian 系的 Linux 发行版的软件包，包括 Debian、Ubuntu、Linux Mint 等。
+APT（Advanced Packaging Tool）是一个软件包管理器，用于管理 Debian 系的 Linux 发行版的系统软件包，包括 Debian、Ubuntu、Linux Mint 等。
 
 #### APT 的基本使用
 
@@ -57,7 +57,7 @@ pip 的基本使用方法如下：
 
 **注意**：对于 Debian 系的 Linux 发行版，系统的 Python 环境由系统的包管理器 `apt` 管理，因此请使用 `apt` 安装 Python 的包，而不是使用 `pip` 安装 Python 的包。例如，如果要安装 OpenCV，应该使用 `apt install python3-opencv`，而不是使用 `pip install opencv-python`。
 
-自 Python 3.11 起，Pip 已全面禁止安装软件包到系统 Python 环境（参考 [PEP 656 -- Allow pip to be invoked as a module](https://www.python.org/dev/peps/pep-0656/)），因此如果要安装 Python 的包，应该使用 [`pipx`](https://pipxproject.github.io/pipx/) 或者 `pipenv`。
+自 Python 3.11 起，Pip 已全面禁止安装软件包到系统 Python 环境（参考 [PEP 668 -- Marking Python base environments as “externally managed”](https://www.python.org/dev/peps/pep-0668/)），因此如果要安装系统包管理器仓库里没有的 Pip 包，应该使用 [`pipx`](https://pipxproject.github.io/pipx/) 或者 `pipenv`。
 
 #### pipenv 的基本使用
 
