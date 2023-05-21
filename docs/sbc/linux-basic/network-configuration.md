@@ -10,7 +10,7 @@
 
 接下来，我们将介绍如何通过网络的方式重新连接到树莓派。
 
-**注意**：如果树莓派并未成功启动，那么本文档中的方法将无法使用，请参考 [如何解决树莓派无法启动的问题](./system-troubleshooting.md#如何解决树莓派无法启动的问题)。
+> **注意**：如果树莓派并未成功启动，那么本文档中的方法将无法使用，请参考 [如何解决树莓派无法启动的问题](./system-troubleshooting.md#如何解决树莓派无法启动的问题)。
 
 ### 借助路由器
 
@@ -74,6 +74,8 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 ![ifconfig 命令输出](./images/network-configuration/ifconfig.jpg)
 如图所示，`rndis0` 为 USB 网络共享所对应的接口，其 IP 地址为 192.168.19.180。按照 Android 的 USB 网络共享的规则，其子网的 CIDR 为 24，所以子网为 192.168.19.0/24。
 
+*其他接口分别为：本地回环接口（`lo`）、手机数据网络接口（`rmnet_data2`）、无线网络接口（`wlan0`）*
+
 #### 扫描子网中的所有设备
 
 在 Termux 中执行 `nmap -sn -n <网段>` 命令，上文中的子网网段为 192.168.19.0/24，执行结果如下：
@@ -96,7 +98,7 @@ Nmap done: 256 IP addresses (2 hosts up) scanned in 11.79 seconds
 
 在 Termux 中执行 `ssh pi@<树莓派的 IP 地址>` 命令，然后输入密码，即可连接到树莓派。
 
-*作者注：在高版本 Android 中，由于权限收紧，普通用户已无法使用 `iproute2` 的相关命令（例如 `ip a`），所以此处使用 `ifconfig` 和 `nmap` 命令来代替。*
+> *作者注：在高版本 Android 中，由于权限收紧，普通用户已无法使用 `iproute2` 的相关命令（例如 `ip a`），所以此处使用 `ifconfig` 和 `nmap` 命令来代替。*
 
 ### 借助电脑
 
@@ -143,6 +145,15 @@ rtt min/avg/max/mdev = 0.035/0.747/1.487/0.694 ms
 
 **备注**：如果收到的回复超过两个，可能是因为电脑上有多个网卡，可以逐个尝试除了本接口上 `fe80::xxxx:xxxx:xxxx:xxxx/64` 以外的 IPv6 地址。
 
+除此之外，还可以通过 `ip -6 neigh` 命令来查看本地链路上的所有设备：
+
+```bash
+❯ ip -6 neigh
+...
+fe80::yyyy:yyyy:yyyy:yyyy dev enp8s0 lladdr yy:yy:yy:yy:yy:yy REACHABLE
+...
+```
+
 #### Windows
 
 将树莓派用网线连接到电脑上以后，打开 **设置 - 网络和 Internet - 以太网**，可以发现接口上也会有一个 `fe80::` 开头的 IPv6 地址，这个地址就是电脑的本地链路 IPv6 地址。
@@ -187,4 +198,4 @@ todo 图片
 
 #### 使用 wpa_supplicant
 
-参考 [ArchWiki](https://wiki.archlinuxcn.org/wiki/WPA_Supplicant)。
+参考 [ArchWiki](https://wiki.archlinuxcn.org/wiki/WPA_Supplicant) 或者 [树莓派官方文档（英文）](https://www.raspberrypi.com/documentation/computers/configuration.html#wireless-networking-command-line)。
