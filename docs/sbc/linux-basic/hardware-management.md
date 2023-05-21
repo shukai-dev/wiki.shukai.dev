@@ -142,8 +142,7 @@ Inter-|   Receive                                                |  Transmit
 - `p` 表示 Physical，后面的信息表示网卡的物理位置
 - `x` 表示未知类型的网卡，例如 USB 网卡
 
-在此之后，还有基于接口、位置、索引、MAC 地址等的命名方式，例如 `enp1s0`、`eno2`、`ens1`、`enx00e04c68001` 等，此处不再赘述，详情请参考 [systemd.net-naming-scheme](https://www.freedesktop.org/software/systemd/man/systemd.net-naming-scheme.html) 或者 [Consistent network interface device naming](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/consistent-network-interface-device-naming_configuring-and-managing-networking#network-interface-device-naming-hierarchy_consistent-network-interface-device-naming)
-
+在此之后，还有基于接口、位置、索引、MAC 地址等的命名方式，例如 `enp1s0`、`eno2`、`ens1`、`enx00e04c68001` 等，此处不再赘述，详情请参考 [一致的网络接口设备命名](https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/consistent-network-interface-device-naming_configuring-and-managing-networking#network-interface-device-naming-hierarchy_consistent-network-interface-device-naming) 或者 [systemd.net-naming-scheme（英语）](https://www.freedesktop.org/software/systemd/man/systemd.net-naming-scheme.html)。
 ##### 虚拟网卡的名称
 
 虚拟网卡的名称依类型而定，例如 Docker 的虚拟网卡的名称为 `docker0`，VirtualBox 虚拟机软件的虚拟网卡的名称为 `vboxnet0`，而桥接网卡的名称为 `br0`，可以查阅对应软件的文档来了解更多信息。
