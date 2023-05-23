@@ -1,5 +1,9 @@
 # 硬件管理与控制
 
+todo 用准确的信息替换下面示例的信息，现在的是 copilot 生成的
+
+todo 增加更多的硬件设备信息
+
 ## 前言
 
 在类 Unix 系统中，万物皆可文件，硬件设备也不例外。Linux 提供了一系列的文件来管理硬件设备，这些文件位于 `/sys` 和 `/proc` 目录下，其中 `/sys` 目录下的文件是用来管理硬件设备的，而 `/proc` 目录下的文件是用来管理进程的。此外，还有一些硬件设备的文件位于 `/dev` 目录下。
@@ -54,8 +58,6 @@ CPU min MHz:         600.0000
 BogoMIPS:            38.40
 Flags:               half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32
 ```
-
-todo 用准确的信息替换上面的信息，现在的是 copilot 生成的
 
 ### 内存
 
@@ -143,6 +145,174 @@ Inter-|   Receive                                                |  Transmit
 - `x` 表示未知类型的网卡，例如 USB 网卡
 
 在此之后，还有基于接口、位置、索引、MAC 地址等的命名方式，例如 `enp1s0`、`eno2`、`ens1`、`enx00e04c68001` 等，此处不再赘述，详情请参考 [一致的网络接口设备命名](https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/consistent-network-interface-device-naming_configuring-and-managing-networking#network-interface-device-naming-hierarchy_consistent-network-interface-device-naming) 或者 [systemd.net-naming-scheme（英语）](https://www.freedesktop.org/software/systemd/man/systemd.net-naming-scheme.html)。
+
 ##### 虚拟网卡的名称
 
 虚拟网卡的名称依类型而定，例如 Docker 的虚拟网卡的名称为 `docker0`，VirtualBox 虚拟机软件的虚拟网卡的名称为 `vboxnet0`，而桥接网卡的名称为 `br0`，可以查阅对应软件的文档来了解更多信息。
+
+### 输入设备
+
+输入设备的信息位于 `/proc/bus/input/devices` 文件中。
+
+```bash
+❯ cat /proc/bus/input/devices
+I: Bus=0019 Vendor=0000 Product=0005 Version=0000
+N: Name="Lid Switch"
+P: Phys=PNP0C0D/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input0
+U: Uniq=
+H: Handlers=event0
+B: PROP=0
+B: EV=21
+B: SW=1
+...
+```
+
+我们也可以通过 `lsusb` / `lspci` 等命令查看对应接口的设备信息。
+
+```bash
+❯ lsusb
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 003: ID 0bda:0129 Realtek Semiconductor Corp. RTS5129 Card Reader Controller
+Bus 001 Device 002: ID 04f2:b3fd Chicony Electronics Co., Ltd HD WebCam
+...
+```
+
+*对于机器上有多个同类型设备的情况，可以通过 `lsusb -t` / `lspci -t` 等命令查看设备的拓扑信息，也可以通过插拔设备来观察 `/dev` 下的设备文件变化。*
+
+#### 摄像头
+
+摄像头的信息位于 `/dev/video*` 文件中。
+
+```bash
+❯ ls /dev/video*
+/dev/video0
+```
+
+我们可以通过 `v4l2-ctl` 命令来查看摄像头的信息。
+
+```bash
+❯ v4l2-ctl --list-devices
+Integrated Camera: Integrated C (usb-0000:00:14.0-6):
+  /dev/video0
+  /dev/video1
+```
+
+#### 麦克风
+
+麦克风的信息位于 `/dev/snd/*` 文件中。
+
+```bash
+❯ ls /dev/snd/*
+/dev/snd/by-id:
+usb-0bda_USB2.0-CRW_20121101000000-00
+usb-0bda_USB2.0-CRW_20121101000000-00-multichannel
+usb-USB_Advanced_Audio_Device-00
+
+/dev/snd/by-path:
+pci-0000:00:1f.3-platform-skl_hda_dsp_generic-mic
+pci-0000:00:1f.3-platform-skl_hda_dsp_generic-mls
+pci-0000:00:1f.3-platform-skl_hda_dsp_generic-mls.0
+pci-0000:00:1f.3-platform-skl_hda_dsp_generic-mls.1
+pci-0000:00:1f.3-platform-skl_hda_dsp_generic-mls.2
+
+/dev/snd/controlC0
+/dev/snd/controlC1
+/dev/snd/hwC0D0
+/dev/snd/hwC1D0
+...
+```
+
+我们可以通过 `arecord` 命令来录制音频。
+
+```bash
+❯ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 0: PCH [HDA Intel PCH], device 0: ALC3246 Analog [ALC3246 Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: NVidia [HDA NVidia], device 3: HDMI 0 [HDMI 0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+...
+```
+
+#### CH341 等 USB 转串口芯片
+
+CH341 等 USB 转串口芯片的信息位于 `/dev/ttyUSB*` 文件中。
+
+```bash
+❯ ls /dev/ttyUSB*
+/dev/ttyUSB0
+```
+
+我们可以通过 `dmesg` 命令来查看设备的信息。
+
+```bash
+❯ dmesg | grep ttyUSB
+[    3.164000] usb 1-1.2: ch341-uart converter now attached to ttyUSB0
+```
+
+## 常见的硬件使用与控制方法
+
+### 网卡的使用与控制
+
+*详见 [网络配置](./network-configuration.md)。*
+
+### 存储设备的使用与控制
+
+#### 挂载
+
+在连接存储设备之后，我们需要先查看设备的分区信息：
+
+```bash
+❯ lsblk -f
+NAME   FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINT
+mmcblk0
+├─mmcblk0p1
+│    vfat   FAT32       3E3C-1A1A                             100.9M    12% /boot
+└─mmcblk0p2
+     ext4   1.0         1f2e2c2c-2b2b-2c2c-2c2c-2c2c2c2c2c2c  110.9G    10% /
+sda
+├─sda1
+│    vfat   FAT32       3E3C-1A1A                            100.9M    12%
+└─sda2
+     ntfs         01D7E1E4D7E1D9E1
+...
+```
+
+然后我们可以通过 `mount` 命令来挂载分区。
+
+```bash
+❯ sudo mount /dev/sda2 /mnt/disk
+```
+
+接下来，我们可以通过 `df` 命令来查看挂载情况。
+
+```bash
+❯ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+dev             7.8G     0  7.8G   0% /dev
+run             7.8G  1.7M  7.8G   1% /run
+/dev/mmcblk0p2  109G   10G   94G  10% /
+tmpfs           7.8G     0  7.8G   0% /dev/shm
+tmpfs           7.8G     0  7.8G   0% /sys/fs/cgroup
+tmpfs           7.8G  8.0K  7.8G   1% /tmp
+/dev/mmcblk0p1  100M   13M   88M  13% /boot
+/dev/sda2       1.8T  1.2T  653G  65% /mnt/disk
+tmpfs           1.6G     0  1.6G   0% /run/user/1000
+```
+
+#### 卸载
+
+在断开存储设备之前，我们应该通过 `umount` 命令来卸载已经挂载的分区。
+
+```bash
+❯ sudo umount /mnt/disk
+```
+
+对于机械硬盘，我们可以通过 `hdparm` 命令来控制硬盘的休眠，保护硬盘。
+
+```bash
+❯ sudo hdparm -y /dev/sda
+```
