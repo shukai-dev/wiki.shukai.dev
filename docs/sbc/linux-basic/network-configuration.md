@@ -198,4 +198,4 @@ todo 图片
 
 #### 使用 wpa_supplicant
 
-参考 [ArchWiki](https://wiki.archlinuxcn.org/wiki/WPA_Supplicant) 或者 [树莓派官方文档（英文）](https://www.raspberrypi.com/documentation/computers/configuration.html#wireless-networking-command-line)。
+参考 [ArchWiki](https://wiki.archlinuxcn.org/wiki/WPA_Supplicant) 或者 [树莓派官方文档（英语）](https://www.raspberrypi.com/documentation/computers/configuration.html#wireless-networking-command-line)。
