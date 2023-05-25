@@ -15,21 +15,20 @@
 * [如何使用 Shell](./shell-tutorial.md)
 * [常用命令](./common-commands.md)
 * [网络配置](./network-configuration.md)
-* [文件系统](./filesystem.md)
 * [软件包管理](./package-management.md)
-* [用户与权限管理](./user-management.md)\*
 * [服务管理](./service-management.md)
-* [进程管理](./process-management.md)\*
-* [日志管理](./log-management.md)\*
 * [硬件管理](./hardware-management.md)
+* [进程管理](./process-management.md)\*
+* [用户与权限管理](./user-management.md)\*
+* [文件系统](./filesystem.md)\*
 * [系统管理](./system-management.md)\*
 * [系统安全](./system-security.md)\*
 * [系统优化](./system-optimization.md)\*
 * [系统监控](./system-monitoring.md)\*
 * [系统备份与恢复](./system-backup.md)\*
-* [系统更新](./system-update.md)\*
-* [系统故障排除](./system-troubleshooting.md)
 * [软件调试](./software-debugging.md)\*
+* [日志管理](./log-management.md)\*
+* [系统故障排除](./system-troubleshooting.md)
 
 ## 本章节的参考资料
 
