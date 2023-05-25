@@ -23,6 +23,25 @@ nav:
   - SBC:
     - Linux 基础知识:
       - 简介: sbc/linux-basic/beginning.md
+      - 如何选择发行版: sbc/linux-basic/distros.md
+      - 如何安装系统: sbc/linux-basic/installation.md
+      - 如何使用 Shell: sbc/linux-basic/shell-tutorial.md
+      - 常用命令: sbc/linux-basic/common-commands.md
+      - 网络配置: sbc/linux-basic/network-configuration.md
+      - 软件包管理: sbc/linux-basic/package-management.md
+      - 服务管理: sbc/linux-basic/service-management.md
+      - 硬件管理: sbc/linux-basic/hardware-management.md
+      - 进程管理: sbc/linux-basic/process-management.md
+      - 用户与权限管理: sbc/linux-basic/user-management.md
+      - 文件系统: sbc/linux-basic/filesystem.md
+      - 系统管理: sbc/linux-basic/system-management.md
+      - 系统安全: sbc/linux-basic/system-security.md
+      - 系统优化: sbc/linux-basic/system-optimization.md
+      - 系统监控: sbc/linux-basic/system-monitoring.md
+      - 系统备份与恢复: sbc/linux-basic/system-backup.md
+      - 软件调试: sbc/linux-basic/software-debugging.md
+      - 日志管理: sbc/linux-basic/log-management.md
+      - 系统故障排除: sbc/linux-basic/system-troubleshooting.md
 
 # 主题配置
 theme:
