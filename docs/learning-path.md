@@ -39,6 +39,7 @@
 可能会涉及到的学习路线：
 
 * [Linux 基础知识](./sbc/linux-basic/beginning.md)
+* Linux的使用
 * 树莓派的高级用法
 * Linux 上的 C/C++ 编程
 * C/C++ 编程（进阶）
