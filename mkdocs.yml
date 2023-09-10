@@ -20,7 +20,7 @@ nav:
   - 基础:
     - 计算机基础知识:
       - 简介: basic/cs-basic/beginning.md
-      - Windows下VScode配置: how-to-use-vscode.md
+      - Windows下VScode配置: basic/cs-basic/how_to_use_vscode.md
   - SBC:
     - Linux 基础知识:
       - 简介: sbc/linux-basic/beginning.md
