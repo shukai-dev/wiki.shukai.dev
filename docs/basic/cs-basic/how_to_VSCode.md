@@ -6,7 +6,7 @@
 >
 > 下面将会演示一遍，完成`C\C++`编译器、`Python`解释器和`VSCode`及相关插件的安装。
 
-这里我们提供一个自解压的软件包供大家使用，[点击下载](https://cowtransfer.com/s/06aded92fce84c)，验证码：m6g2f1
+这里我们提供一个自解压的软件包供大家使用，[点击下载](https://cowtransfer.com/s/06aded92fce84c)，code：m6g2f1
 
 在这个自解压包中，我们为大家提供了四个文件：
 
