@@ -226,7 +226,7 @@
 
 > 前面我们已经完成了本地的`MinGW64`的C/C++编译器，但是我们目前还不能通过`VSCode`调用这个编译器来编译我们的代码，这时候就需要安装`C/C++`的插件了。
 
-1. 选择VSCode左侧栏的拓展选项，在搜索栏中输入`C++`，搜索`C\C++`插件，选择`C\C++`和`C\C++ Extension Pack`两个插件进行安装`install`
+1. 选择VSCode左侧栏的拓展选项，在搜索栏中输入`C++`，搜索`C\C++`插件，`C\C++ Extension Pack`插件进行安装`install`
 
    <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132057371.png" alt="image-20230913205736258" style="zoom:33%;" />
 
@@ -242,12 +242,79 @@
 
       <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132103059.png" alt="image-20230913210327945" style="zoom: 25%;" />
 
-   3. 
+   3. 在`test`文件夹下新建一个C语言源文件`test.c`
 
-   4. 
+   4. 在`test.c`文件中输入代码时，不知道为什么头文件在提示有误。
 
-   5. 
+      <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132226637.png" alt="image-20230913222633544" style="zoom:25%;" />
 
-   6. 
+   5. 这其实是我们没有选择针对C\C++的编译器，我们点击编辑器右下角的`win32`,选择弹出的`编辑配置UI`
 
+      <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132231599.png" alt="202309132228375" style="zoom:30%;" />
+   
+   6. 在新页面的编译器路径空处填入编译器路径，如果是和本教程一样的路径应该是`C:\mingw64\bin\gcc.exe`
+   
+      <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132230743.png" alt="image-20230913223007612" style="zoom:33%;" />
+   
+   7. 这样我们就可以运行我们的测试代码了，点击运行代码<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132246404.png" alt="image-20230913224632293" style="zoom:33%;" />
+   
       
+   
+   8. 直接选择弹出的首选项
+   
+      <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132247466.png" alt="image-20230913224731420" style="zoom:50%;" />
+   
+   9. 最后可以看到我们成功运行并且输出了我们的内容
+   
+      <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132249864.png" alt="image-20230913224957766" style="zoom:33%;" />
+   
+
+
+
+ **test文件的路径下不要有中文目录，不然会报错。**
+ **当然路径中也不要带空格。**
+
+
+
+#### 安装VSCode的Python插件
+
+> 我们之前已经安装python的解释器，其实已经可以在命令行运行python脚本了。
+>
+> 但是我们想要在VSCode里面快乐使用python还需要安装
+
+1. 选择VSCode左侧栏的拓展选项，在搜索栏中输入`Python`，搜索`Python`插件，选择`Python Extension Pack`两个插件进行安装`install`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132300808.png" style="zoom:33%;" />   
+
+2. 那我们如何运行一个Python脚本呢？
+
+   1. 我们首先在桌面上新建一个`test`文件夹，右键选择更多选项，选择**使用`code`打开**
+
+   2. 在接下来的界面里选择信任
+
+      <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132103059.png" alt="image-20230913210327945" style="zoom: 25%;" />
+
+   3. 在`test`文件夹下新建一个C语言源文件`test.py`
+
+3. 然后在`.py`文件中写入我们的代码，然后运行。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132305367.png" alt="image-20230913230500298" style="zoom:33%;" />
+
+4. 我们成功运行了。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132306838.png" alt="image-20230913230605766" style="zoom:33%;" />
+
+   
+
+#### 安装Code Runner插件
+
+>可能大家会发现用VSCode自带的运行时候，会有很多干扰信息
+
+<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132310993.png" alt="image-20230913231041941" style="zoom:40%;" />
+
+跟着一起输出到了终端中，为了信息简单明了，我们可以安装另一款插件`Code Runner`，它能够简化输出内容，让信息更加直观。
+
+安装过程和上面安装插件一样，只是搜索时候搜索`code runner`安装就行
+
+<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132313648.png" alt="image-20230913231324579" style="zoom:33%;" />
+
