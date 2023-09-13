@@ -95,3 +95,79 @@
 
 
 
+## Python环境安装
+
+### 本地解释器安装
+
+> `Python`的环境安装就相对简单了，就是安装包一键式安装了。
+>
+> 当然在学习中注意`Python2`和`Python3`的区别，我们学习中使用的是`Python3`。
+>
+> 我们提供的安装包版本为`3.11.5`，当然你也可以去**Python**官网上，[点击查看](https://www.python.org/downloads/)
+
+1. 双击打开软件包解压出来的`python-3.11.5-amd64.exe`
+
+2. 勾选`Add python.exe to PATH`，这一步一定要勾选，但是如果忘记请到后续补充：[点击跳转](#(补充)Python系统环境变量)
+
+3. 选择`Install Now`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131843788.png" alt="image-20230913184352722" style="zoom:50%;" />
+
+4. 然后耐心等待片刻。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131844151.png" alt="image-20230913184447102" style="zoom:50%;" />
+
+5. 出现以下界面则表示安装完成
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131902155.png" alt="image-20230913184755444" style="zoom:50%;" />
+
+   
+   
+
+### 测试Python解释器是否可用
+
+> 一般来讲像上面那样安装成功以后就没有什么问题了，但是为了保险起见，我们还是来确认一下。
+
+1. 在键盘上同时按下`Win+R`，在运行窗口输入`cmd`,然后点击运行或者回车。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131809132.png" alt="9" style="zoom:50%;" />
+
+2. 在新出现的黑色窗口(命令行窗口)，输入`python`。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131913253.png" alt="image-20230913191307213" style="zoom:60%;" />
+
+3. 出现以下界面则代表解释器正常运行。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131913242.png" alt="image-20230913191345206" style="zoom:50%;" />
+
+
+
+### (补充)Python系统环境变量
+
+> 有一部分同学提前安装了`python`但是没有配置好`PATH`变量或者在安装的时候忘记勾选`Add python.exe to PATH`
+>
+> 最直观的方法就是卸载重装，如果选择这个方式建议使用卸载软件`geek.exe`,[点击下载](https://geekuninstaller.com/download)
+
+最开始打开`编辑系统环境变量`，和上面的步骤一样。[点击跳转](# 配置环境变量)
+
+**但是得注意的一点是：`python`的路径和`mingw64`的路径不同**
+
+而且需要向环境变量中新建两条（下面以python默认安装路径为例）：
+
+1. `C:\Users\admin\AppData\Local\Pregrams\Python\Python3115`
+2. `C:\Users\admin\AppData\Local\Pregrams\Python\Python3115\Script`
+
+- 这个路径会因为你本地的安装目录、python具体版本而有所变化，所以我们还是建议卸载掉重装以免麻烦。
+
+
+
+## VSCode安装与配置
+
+### VSCode软件本体安装
+
+
+
+
+
+
+
