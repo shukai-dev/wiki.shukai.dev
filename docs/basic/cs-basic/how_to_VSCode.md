@@ -165,9 +165,89 @@
 
 ### VSCode软件本体安装
 
+> 安装包在我们提供的软件包里面是有的，提供版本为`1.8.0 for all users`，当然大家也可以去官网下载最新版本。[点击下载](https://code.visualstudio.com/download)
+
+1. 双击打开`VSCodeSetup-x64-1.82.0.exe`
+
+2. 选择`我同意此协议`后下一步
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132014695.png" alt="image-20230913201441638" style="zoom:50%;" />
+
+3. 选择安装路径，因为`VSCode`真不大，还是建议装在默认的C盘路径下：
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132015675.png" alt="image-20230913201538630" style="zoom:50%;" />
+
+4. 一直下一步就好，知道出现下面界面：
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132017765.png" alt="image-20230913201700726" style="zoom:50%;" />
+
+   - 将其它内容的前面两项勾选上，然后下一步
+
+5. 点击安装后，耐心等待安装完成。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132020709.png" alt="image-20230913202054659" style="zoom:50%;" />
+
+6. 点击完成，自动运行`VSCode`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132021683.png" alt="image-20230913202151636" style="zoom:50%;" />
+
+- 就这样我们完成了，`VSCode`的安装，但是现在的它只是一个纯文本编辑器，没有更多的功能，我们需要进一步设置配置它。
 
 
 
+### VSCode的配置与插件安装
+
+- 我们第一次运行`VSCode`可以看到,这个页面：
+
+  <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132041020.png" alt="image-20230913204141834" style="zoom:30%;" />
+
+  - 在这里我们可以选择不同风格的主题，当然默认的看起来就很不错了。
+  - 可以看到目前VSCode是纯英文界面，下面我们将VSCode汉化
+
+#### 汉化VSCode
+
+> `VSCode`支持大量的额外插件，我们就可以通过这些插件进行各种操作
+
+1. 选择VSCode左侧栏的拓展选项，在搜索栏中输入`Chinese`，搜索汉化插件，选择简体中文进行安装`install`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132048868.png" alt="image-20230913204840752" style="zoom:30%;" />
+
+2. 等待安装完毕以后会提示更改语言重新加载软件，点击重新加载。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132050123.png" alt="image-20230913205046020" style="zoom:33%;" />
+
+3. 重新启动软件以后我们就得到了一个中文界面的`VSCode`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132051043.png" alt="image-20230913205142942" style="zoom:33%;" />
 
 
 
+#### 安装VSCode的C/C++拓展
+
+> 前面我们已经完成了本地的`MinGW64`的C/C++编译器，但是我们目前还不能通过`VSCode`调用这个编译器来编译我们的代码，这时候就需要安装`C/C++`的插件了。
+
+1. 选择VSCode左侧栏的拓展选项，在搜索栏中输入`C++`，搜索`C\C++`插件，选择`C\C++`和`C\C++ Extension Pack`两个插件进行安装`install`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132057371.png" alt="image-20230913205736258" style="zoom:33%;" />
+
+2. 到下面这样就安装完成了。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132100047.png" alt="image-20230913210033948" style="zoom:33%;" />
+
+3. 那我们如何运行一个C语言文件呢？
+
+   1. 我们首先在桌面上新建一个`test`文件夹，右键选择更多选项，选择**使用`code`打开**
+
+   2. 在接下来的界面里选择信任
+
+      <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309132103059.png" alt="image-20230913210327945" style="zoom: 25%;" />
+
+   3. 
+
+   4. 
+
+   5. 
+
+   6. 
+
+      
