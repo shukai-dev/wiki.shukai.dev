@@ -26,16 +26,24 @@
   - 选择在线安装的同学注意自身的网络环境，不然容易安装失败或者安装缓慢。
   - 自己下载离线包请认真核对版本和自身系统环境是否相符。
 
+<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131749656.png" alt="1" style="zoom:50%;" />
+
 
 ### 下载离线包并解压
 
 > 我们只是提供了一个建议的解压软件`7-Zip`，可以使用其它解压软件，但是在`Windows`上个人还是推荐`Bandzip`和`7-Zip`
 
 1. 下载我们提供的自解压软件包并解压：[点击下载](https://cowtransfer.com/s/b0a37fb4c9c043)，code：izja6a
+
 2. 找到`mingw64.zip`，打开以后解压到一个你可以找到的地方。
    - 如果无法打开请双击安装提供的`7z2301-x64.exe`安装包
+   
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131750609.png" alt="2" style="zoom:35%;" />
+   
 3. 将解压出来的文件夹，剪贴到`C盘`根目录下。
    - 这里是建议将编译器放在`C盘`根目录下以免出现软件无法识别到编译器的情况。
+   
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131750591.png" alt="3" style="zoom:40%;" />
 
 ### 配置环境变量与检测安装是否完成
 
@@ -43,11 +51,26 @@
 
 1. 复制你放在`C盘`的`mingw64`文件夹下的`bin`文件路径。
    - 如果你是放在`C盘`的话，路径应该是`C:\mingw64\bin`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131753073.png" alt="4" style="zoom:30%;" />
+
 2. 在开始菜单里搜索`编辑系统环境变量`，选择打开
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131804672.png" alt="5" style="zoom:30%;" />
+
 3. 单击弹出窗口上的`环境变量`
+
 4. 在用户环境变量的内容中点击选中变量`Path`，再从侧边栏中选择`编辑`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131807642.png" alt="6" style="zoom:33%;" />
+
 5. 在新弹出的页面上选择`新建`，并将复制的路径粘贴到新建行中。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131808881.png" alt="7" style="zoom:45%;" />
+
 6. 选择三次`确定`
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131809548.png" alt="8" style="zoom:33%;" />
 
 #### 检测编译器是否安装成功
 
@@ -55,10 +78,20 @@
 > **PS：并不是说这个方法能够检测其它IDE自带的编译环境，而是不依赖任何IDE的公有编译环境**
 
 1. 在键盘上同时按下`Win+R`，在运行窗口输入`cmd`,然后点击运行或者回车。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131809132.png" alt="9" style="zoom:50%;" />
+
 2. 在新出现的黑色窗口(命令行窗口)，输入命令`gcc -v`或者`g++ -v`。
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131812492.png" alt="image-20230913181207459" style="zoom:67%;" />
+
 3. 若出现`'gcc' 不是内部或外部命令，也不是可运行的程序或批处理文件`，如图的情况就是未成功，请返回环境变量的配置。[点击跳转](#配置环境变量)
+
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131811556.png" alt="10" style="zoom:50%;" />
+
 4. 若出现下图所示的编译器版本及路径信息就是安装成功。
 
+   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309131810131.png" alt="11" style="zoom:50%;" />
 
 
 
