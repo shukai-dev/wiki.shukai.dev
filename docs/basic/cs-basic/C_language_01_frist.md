@@ -18,7 +18,8 @@
 
 根据我们使用的`IDE`环境——`VScode`，我们需要在在软件中打开文件夹，然后新建文件。
 
-![新建.c文件](https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152252327.gif)
+<div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152252327.gif" alt="image-20230915232618820" style="zoom:100%;" /></div>
+
 
 在我们新建好的文件里面我们就可以愉快的进行编程了。
 
@@ -43,17 +44,17 @@ int main()
 
 点击图标旁边的小三角会出现：
 
-<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152326947.png" alt="image-20230915232618820" style="zoom:20%;" />
+<div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152326947.png" alt="image-20230915232618820" style="zoom:20%;" /></div>
 
 `Run code`选项是因为我们安装插件`Code Runner`而出现的选项，选择`Run code`或者`运行C/C++文件`选项都是可以的，我们可以比较一下两者的区别：
 
 `Run code`:
 
-<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152332920.png" alt="image-20230915233210867" style="zoom:35%;" />
+<div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152332920.png" alt="image-20230915233210867" style="zoom:35%;" /></div>
 
 `运行C/C++文件`：
 
-<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152333814.png" alt="image-20230915233321759" style="zoom:40%;" />
+<div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152333814.png" alt="image-20230915233321759" style="zoom:40%;" /></div>
 
 其实我们可以发现使用`Run Code`的输出会简洁很多，这也是之前建议同学们安装这个插件的原因。
 
@@ -62,8 +63,7 @@ int main()
   - 我们可以发现在我们`hello.c`的同一个目录下产生了一个`hello.exe`，这就是windows下的可执行文件。
   - 当然在整个文件目录下产生了一个`.vscode`的文件夹，这个是我们在选择`运行C/C++文件`后产生的一个文件，保存了`VScode`对于这个文件夹下文件编译的配置信息
 
-  <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152351581.png" alt="image-20230915235122538" style="zoom:80%;" />
-
+  <div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/202309152351581.png" alt="image-20230915235122538" style="zoom:80%;" /></div>
 这里就说一个完整的同时也是最为简单的C语言示例。相信大家不管从何种渠道都多多少少了解过hello world程序的编写，但是笔者还是想要来啰嗦一两句话。
 
 那么下面我们来解读一下这个代码每一行的意思：
@@ -81,43 +81,27 @@ int main()
 
 1. 首先就是第一句`#include<stdio.h>`
 
-   
-
    > 这个是C语言中引用`头文件`的语句，尖括号内的内容就是`头文件`的名称，我们在这里引用了`stdio.h`这个头函数，这个头函数是C语言的基本头函数，很多基本的函数都在这个头函数里面。引用头函数的语句格式：`#include<name>`，其实通过英语我们就可以看出大概的意思就是包括了什么东西。（这里我们也可以将`头文件`称做`库`，`函数库`）
-
-   
 
 2. 然后下一句`int main(){ }`
 
-   
-
    > 这条语句的意思是，声明了一个`主函数`，它是一个程序的执行步骤，你可以将主函数理解为一个 `ToDo List`，程序需要按照主函数内的步骤一步一步执行编码者对电脑的一行行命令。
 
-   
-
 3. The next `printf("Hrllo,World!");`
-
-   
 
    > 这条语句就是对程序的一个命令，`print`是打印，很容易可以推导出`printf();`这条语句就是将括号内的内容“打印”到程序窗格内。`“ ”`就代表着将里面的内容没有改变的输出到程序窗格内。
    >
    > 特别提醒：`;`在C和C++中都是表示这一句命令完结的意思所以记得在所有的语句完成后加上`;`，就像写作文每一句话写完后记得加句号一样。
-
    
-
 4. The end `return 0;`
 
-    
-
    > 直接翻译：`返回0`，这里代表的就是主函数正常结束，没有什么异常情况。但是不要忘记`；`。
-
-   
 
    我们这里来蹭蹭`Chat GPT`的热度：
 
    
 
-   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221214202800219.png" alt="image-20221214202800219" style="zoom:50%;" />
+   <div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221214202800219.png" alt="image-20221214202800219" style="zoom:50%;" /></div>
 
    
 
@@ -125,7 +109,7 @@ int main()
 
    
 
-   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221216001100114.png" alt="image-20221216001100114" style="zoom:50%;" />
+   <div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221216001100114.png" alt="image-20221216001100114" style="zoom:50%;" /></div>
 
    
 
@@ -133,7 +117,7 @@ int main()
 
    
 
-   <img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215235909412.png" alt="image-20221215235909412" style="zoom:50%;" />
+   <div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215235909412.png" alt="image-20221215235909412" style="zoom:50%;" /></div>
 
    
 
@@ -144,9 +128,9 @@ int main()
    然后我们就可以开始整新活了，还是之前那段代码，我们可以了解到`printf`可以输出一串字符，那么我们如果想要完成下面几个操作该如何做呢？
 
    1. 完成多个句子的输出
-   2. 完成换行输出
-
+2. 完成换行输出
    
+
 
 - **完成多个句子的输出:**
 
@@ -154,7 +138,7 @@ int main()
 
   
 
-  ```c
+```c
 #include<stdio.h>
 int main()
 {
@@ -163,17 +147,16 @@ int main()
     //或者将上面的两句改为：printf("Hello, World! Hello, World!");
 	return 0;
 }
-  ```
+```
 
    
 
 但是有一个问题，我们运行看看：
 
 
+<div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215000654055.png" alt="image-20221215000654055" style="zoom:33%;" /></div>
 
-<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215000654055.png" alt="image-20221215000654055" style="zoom:33%;" />
-
-<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215000713212.png" alt="image-20221215000713212" style="zoom:33%;" />
+<div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215000713212.png" alt="image-20221215000713212" style="zoom:33%;" /></div>
 
 
 
@@ -204,8 +187,10 @@ int main()
 
 
 
-<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215001648591.png" alt="image-20221215001648591" style="zoom:33%;" />
+<div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215001648591.png" alt="image-20221215001648591" style="zoom:33%;" /></div>
 
-<img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215001747005.png" alt="image-20221215001747005" style="zoom:33%;" />
+
+
+<div align=center><img src="https://mzee-imge.oss-cn-shanghai.aliyuncs.com/images/image-20221215001747005.png" alt="image-20221215001747005" style="zoom:33%;" /></div>
 
 这就是一个很简单的，C语言入门程序啦。

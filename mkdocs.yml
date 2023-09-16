@@ -22,7 +22,7 @@ nav:
       - 简介: basic/cs-basic/beginning.md
     - Windows下VScode配置: basic/cs-basic/how_to_VSCode.md
     - C语言简单入门: 
-      - C语言的引入: basic/cs-basic/C_language_frist.md
+      - C语言的引入: basic/cs-basic/C_language_01_frist.md
   - SBC:
     - Linux 基础知识:
       - 简介: sbc/linux-basic/beginning.md
