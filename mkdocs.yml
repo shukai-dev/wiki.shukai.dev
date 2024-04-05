@@ -26,6 +26,19 @@ nav:
   - SBC:
     - Linux 基础知识:
       - 简介: sbc/linux-basic/beginning.md
+  - 睿抗机器人开发者大赛:
+    - 火线速递:
+      - 简单介绍: robotcom/Hxsd/ReadMe.md
+    - 智慧果园:
+      - 简单介绍: robotcom/Smart_fruit/ReadMe.md
+    - 物资运输:
+      - 简单介绍: robotcom/Dog/ReadMe.md
+      - A1:
+        - 初次使用: robotcom/Dog/A1/firstusing.md
+      - Go1:
+        - 初次使用: robotcom/Dog/Go1/firstusing.md
+    - 足球机器人:
+      - 简单介绍: robotcom/FootBall/ReadMe.md
 
 # 主题配置
 theme:
