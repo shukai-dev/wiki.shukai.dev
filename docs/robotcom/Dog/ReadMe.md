@@ -19,4 +19,5 @@
 
 ### 视觉识别
 
-- A1上提供的摄像头为`Intel RealSense D435i`深度摄像头，一般是使用
+- A1上提供的摄像头为`Intel RealSense D435i`深度摄像头，一般是使用`OpenCV`和`LibRealsense`进行开发
+  - A1上的`LibRealsense`需要使用本机中的`librealsense`项目进行本地编译，或者使用完成编译的版本（个人编译）
