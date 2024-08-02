@@ -6,7 +6,7 @@
 >
 > 下面将会演示一遍，完成`C\C++`编译器、`Python`解释器和`VSCode`及相关插件的安装。
 
-这里我们提供一个自解压的软件包供大家使用，[点击下载](https://cowtransfer.com/s/b0a37fb4c9c043)，code：izja6a
+这里我们提供一个自解压的软件包供大家使用，[点击下载](https://cowtransfer.com/s/7f7268dfeff140)，code：8zxh4w
 
 在这个自解压包中，我们为大家提供了四个文件：
 
@@ -33,7 +33,7 @@
 
 > 我们只是提供了一个建议的解压软件`7-Zip`，可以使用其它解压软件，但是在`Windows`上个人还是推荐`Bandzip`和`7-Zip`
 
-1. 下载我们提供的自解压软件包并解压：[点击下载](https://cowtransfer.com/s/b0a37fb4c9c043)，code：izja6a
+1. 下载我们提供的自解压软件包并解压：[点击下载](https://cowtransfer.com/s/7f7268dfeff140)，code：8zxh4w
 
 2. 找到`mingw64.zip`，打开以后解压到一个你可以找到的地方。
    - 如果无法打开请双击安装提供的`7z2301-x64.exe`安装包
