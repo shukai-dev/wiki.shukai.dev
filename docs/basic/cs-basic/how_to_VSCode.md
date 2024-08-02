@@ -6,7 +6,7 @@
 >
 > 下面将会演示一遍，完成`C\C++`编译器、`Python`解释器和`VSCode`及相关插件的安装。
 
-这里我们提供一个自解压的软件包供大家使用，[点击下载](https://cowtransfer.com/s/7f7268dfeff140)，code：8zxh4w
+这里我们提供一个自解压的软件包供大家使用，[点击下载](https://zen.lanzout.com/b0fonwg6h)密码:fvsc
 
 在这个自解压包中，我们为大家提供了四个文件：
 
@@ -22,7 +22,7 @@
 > 安装MinGW可以通过官方提供的在线安装包进行安装同时也可以使用离线版本的已编译版本的离线包进行安装，本次记录考虑到后来同学们的网络环境问题，我们此次选择使用离线包进行安装。
 
 - `MinGW`版本：MinGW-W64 GCC-8.1.0
-- 建议使用提供的自解压软件包中的版本，如果需要更新版本可以访问：[点击访问](https://sourceforge.net/projects/mingw-w64/files/mingw-w64/)
+- 建议使用提供的自解压软件包中的版本，如果需要更新版本可以访问：[点击访问](https://github.com/niXman/mingw-builds-binaries/releases)
   - 选择在线安装的同学注意自身的网络环境，不然容易安装失败或者安装缓慢。
   - 自己下载离线包请认真核对版本和自身系统环境是否相符。
 
@@ -33,7 +33,7 @@
 
 > 我们只是提供了一个建议的解压软件`7-Zip`，可以使用其它解压软件，但是在`Windows`上个人还是推荐`Bandzip`和`7-Zip`
 
-1. 下载我们提供的自解压软件包并解压：[点击下载](https://cowtransfer.com/s/7f7268dfeff140)，code：8zxh4w
+1. 下载我们提供的自解压软件包并解压：[点击下载](https://zen.lanzout.com/b0fonwg6h)密码:fvsc
 
 2. 找到`mingw64.zip`，打开以后解压到一个你可以找到的地方。
    - 如果无法打开请双击安装提供的`7z2301-x64.exe`安装包
